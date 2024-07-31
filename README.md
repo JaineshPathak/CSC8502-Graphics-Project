@@ -10,6 +10,7 @@ The main source code is inside the "Coursework" folder.
 
 # How to Run?
 
+- Download the latest from "Release" section
 - Run Coursework.exe
 
 # Input Configuration

@@ -1,4 +1,4 @@
-# CSC8502 - Elden Ring Theme
+# CSC8502 - Graphics Project
 
 The task was to make an fantasy style level in OpenGL and C++. I exported the meshes with animations from Unity to the format accepted by NCLGL library framework.
 
@@ -12,7 +12,7 @@ The main source code is inside the "Coursework" folder.
 
 - Run Coursework.exe
 
-# How to Run?
+# Input Configuration
 
 - Movement - WASD
 - Move Up - Space

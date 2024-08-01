@@ -2,8 +2,8 @@
 
 const int MAX_POINT_LIGHTS = 100;
 
-uniform sampler2D diffuseTex;
-layout(location = 2) uniform sampler2D diffuseSplatmapTex;
+layout(location = 0) uniform sampler2D diffuseTex;
+layout(location = 2) uniform sampler2D diffuseDensityTex;
 
 struct DirectionalLight
 {
@@ -50,6 +50,7 @@ in Vertex
 	vec3 worldPos;
 	float visibility;
 	vec2 splatTexCoord;
+	flat int discardGrass;
 } IN;
 
 out vec4 fragColour;
@@ -59,6 +60,8 @@ vec3 CalcPointLight(vec4 pointLightColour, vec3 pointLightPos, float pointLightR
 
 void main(void)
 {
+	if(IN.discardGrass == 1) discard;
+
 	vec4 albedoColor = texture(diffuseTex, IN.texCoord);
 	if(albedoColor.a < 0.4) discard;
 
@@ -75,7 +78,7 @@ void main(void)
 	fragColour = vec4(result, 1.0);
 	//fragColour = vec4(IN.worldPos, 1.0);
 	//fragColour = texture(diffuseTex, (IN.worldPos.xz / textureSize(diffuseTex, 0)) / 16.0f);
-	//fragColour = texture(diffuseSplatmapTex, IN.splatTexCoord);
+	//fragColour = texture(diffuseDensityTex, IN.splatTexCoord);
 	
 	bool fogEnabled = bool(envData.fogData.x);
 	if(fogEnabled)

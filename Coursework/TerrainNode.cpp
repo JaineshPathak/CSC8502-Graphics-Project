@@ -23,6 +23,7 @@ TerrainNode::TerrainNode()
 	//m_NormalsShader = std::shared_ptr<Shader>(new Shader("CWNormalsVertex.glsl", "CWNormalsFragment.glsl", "CWNormalsGeometry.glsl"));
 	m_GrassTexID = AssetManager::Get()->GetTexture("GrassTex", TEXTUREDIR_COURSE_TERRAIN + "Grass_D2.png");
 	m_GrassWindTexID = AssetManager::Get()->GetTexture("GrassWindTex", TEXTUREDIR_COURSE_TERRAIN + "Grass_WindMap.png");
+	m_GrassDensityTexID = AssetManager::Get()->GetTexture("GrassDensityTex", TEXTUREDIR_COURSE_TERRAIN + "Terrain_Grass_Density.png");
 
 	OGLRenderer::SetTextureRepeating(m_GrassTexID, true);
 	
@@ -137,10 +138,10 @@ void TerrainNode::DrawGrass()
 	//Grasses Points Drawing
 	m_GrassShader->Bind();
 
-	//m_GrassShader->SetFloat("u_Time", (float)Window::GetTimer()->GetTotalTimeSeconds());
+	m_GrassShader->SetFloat("u_Time", (float)Window::GetTimer()->GetTotalTimeSeconds());
 	m_GrassShader->SetTexture("diffuseTex", m_GrassTexID, 0);
-	//m_GrassShader->SetTexture("diffuseWindTex", m_GrassWindTexID, 1);
-	//m_GrassShader->SetTexture("diffuseSplatmapTex", m_TerrainHMap->GetTerrainTextureSplatmap(), 2);
+	m_GrassShader->SetTexture("diffuseWindTex", m_GrassWindTexID, 1);
+	m_GrassShader->SetTexture("diffuseDensityTex", m_GrassDensityTexID, 2);
 
 	glDisable(GL_CULL_FACE);
 	glDisable(GL_BLEND);

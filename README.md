@@ -22,10 +22,10 @@ The main source code is inside the "Coursework" folder.
 
 # Screenshots
 
-[![CSC8502-Pic3.png](https://i.postimg.cc/90bPrJZH/CSC8502-Pic3.png)](https://postimg.cc/Zv9vQPww)
-[![CSC8502-Pic1.png](https://i.postimg.cc/3w0Znj52/CSC8502-Pic1.png)](https://postimg.cc/QBs5MTMM)
-[![CSC8502-Pic2.png](https://i.postimg.cc/WzT6NQD7/CSC8502-Pic2.png)](https://postimg.cc/FdCJGCVf)
+[![CSC8502-Pic4.png](https://i.postimg.cc/9f9fSS8N/CSC8502-Pic4.png)](https://postimg.cc/qtk06md8)
+[![CSC8502-Pic5.png](https://i.postimg.cc/26f5fwgj/CSC8502-Pic5.png)](https://postimg.cc/FfDvyj9w)
+[![CSC8502-Pic6.png](https://i.postimg.cc/MTbpZB87/CSC8502-Pic6.png)](https://postimg.cc/jw2bZL22)
 
 # Video
 
-https://www.youtube.com/watch?v=5Nh1VN7zhZY
+[![Graphics Project Video](http://img.youtube.com/vi/SCnvANua4pM/0.jpg)](http://www.youtube.com/watch?v=SCnvANua4pM "CSC8502 - Graphics Project Revision")
